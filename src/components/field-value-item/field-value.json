@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_field_value_item_field_values",
+  "info": {
+    "displayName": "field_value"
+  },
+  "options": {},
+  "attributes": {
+    "short_text": {
+      "type": "string"
+    },
+    "long_text": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

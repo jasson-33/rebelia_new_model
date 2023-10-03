@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "page_components",
+  "info": {
+    "singularName": "page-component",
+    "pluralName": "page-components",
+    "displayName": "PageComponents",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "page_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::page.page",
+      "inversedBy": "page_components"
+    },
+    "order": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "integer",
+      "required": true
+    },
+    "component_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::component.component",
+      "inversedBy": "page_components"
+    },
+    "component_data": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::component-data.component-data",
+      "mappedBy": "page_component_id"
+    }
+  }
+}

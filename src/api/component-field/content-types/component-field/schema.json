@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "component_fields",
+  "info": {
+    "singularName": "component-field",
+    "pluralName": "component-fields",
+    "displayName": "ComponentFields"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
+    "field_type": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
+    "required": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "component_data": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::component-data.component-data",
+      "mappedBy": "fields_id"
+    }
+  }
+}
